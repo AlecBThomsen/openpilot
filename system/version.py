@@ -17,10 +17,13 @@ RELEASE_BRANCHES = ['release-tizi-staging', 'release-mici-staging', 'release-tiz
 TESTED_BRANCHES = RELEASE_BRANCHES + ['devel-staging', 'nightly-dev'] + RELEASE_SP_BRANCHES + TESTED_SP_BRANCHES
 
 SP_BRANCH_MIGRATIONS = {
+  ("tici", "dev-new"): "dev",
+  ("mici", "dev-new"): "dev",
   ("tici", "staging-c3-new"): "staging-tici",
   ("tici", "dev-c3-new"): "staging-tici",
   ("tici", "master"): "master-tici",
   ("tici", "master-dev-c3-new"): "master-tici",
+  ("tizi", "dev-new"): "dev",
   ("tizi", "staging-c3-new"): "staging",
   ("tizi", "dev-c3-new"): "dev",
   ("tizi", "master-dev-c3-new"): "master-dev",
