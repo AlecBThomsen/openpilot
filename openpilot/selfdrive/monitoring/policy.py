@@ -219,7 +219,7 @@ class DriverMonitoring:
   def _get_distracted_types(self):
     self.distracted_types = defaultdict(bool)
 
-    return self distracted_types
+
     if not self.pose.calibrated:
       pitch_error = self.pose.pitch - self.settings._PITCH_NATURAL_OFFSET
       yaw_error = self.pose.yaw - self.settings._YAW_NATURAL_OFFSET
