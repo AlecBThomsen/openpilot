@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "built_at_utc": "2026-10-22T10:04:41.305153+00:00",
+  "base_repository": "https://github.com/firestar5683/StarPilot.git",
+  "base_branch": "Dom",
+  "base_commit": "823a5d5674ec6635b51dd989884dfbd661f90dc4",
+  "firmware_source_commit": "35a37d068b909110ced5ad3c1d16e7a29ddd3092",
+  "firmware_version": "DEV-35a37d06-DEBUG",
+  "compiler": "arm-none-eabi-gcc (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119",
+  "scons": "4.11.1",
+  "python": "3.12.11",
+  "build_command_from_panda": "PYTHONPATH=../opendbc_repo scons --minimal -j4",
+  "build_configuration": "Default DEBUG / ALLOW_DEBUG, matching upstream Dom; RELEASE and DEBUG environment variables unset",
+  "signing_public_key": "panda/certs/debug.pub",
+  "signing_public_key_sha256": "98be6f5fd87ab61c51e91991628d6d9f0b3fd1ef448176e5610a55f18fd4e301",
+  "verification": "All 18 signed images checked for length, VERS2 metadata, payload equality with main.bin, source version, RSA signature, changed runtime signature, and ARM ELF architecture. SHA-256 includes associated bootstubs and ELF files.",
+  "vehicle_validation": "No on-device validation or replay of user vehicle logs has been performed.",
+  "artifacts": [
+    {
+      "variant": "body_h7",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/body_h7.bin.signed",
+          "bytes": 123256,
+          "sha256": "3aee97c751fe8f791d2279ca6fda861071284ab3a6de54831fb48ada4356d124"
+        },
+        {
+          "path": "panda/board/obj/body_h7/main.bin",
+          "bytes": 123120,
+          "sha256": "3b03129c5714f0057e065d909d58a277c8a8b8a964406b0a9bc0756ef59b5e0e"
+        },
+        {
+          "path": "panda/board/obj/body_h7/main.elf",
+          "bytes": 499604,
+          "sha256": "6dff5163eb227396a2dc220df72a683f9ad21356721cd2b1cee04568d630b635"
+        },
+        {
+          "path": "panda/board/obj/body_h7/bootstub.elf",
+          "bytes": 114976,
+          "sha256": "fead4fcf6f40aeaccd3c79f4696bc7d14f2fdb8a3fd77c6e5bcc266674b3f1a7"
+        },
+        {
+          "path": "panda/board/obj/bootstub.body_h7.bin",
+          "bytes": 12752,
+          "sha256": "b05cbe6cd6867a578bdf61a17d9a6721cf9ec910ff61e5f0269f664c1efeda9e"
+        }
+      ]
+    },
+    {
+      "variant": "panda",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda.bin.signed",
+          "bytes": 108736,
+          "sha256": "9d93c458bc1e6da06c4525b7f7c394164978c03bb16a15c88b7d059eb3dcd353"
+        },
+        {
+          "path": "panda/board/obj/panda/main.bin",
+          "bytes": 108600,
+          "sha256": "8f0e7b807f9ce0f439866620a828b21338c1ef21cb81a90635e2f3ecb8fafe6a"
+        },
+        {
+          "path": "panda/board/obj/panda/main.elf",
+          "bytes": 450532,
+          "sha256": "a67f90930507a8c336006c6df46192b1d6bdba06399ccb061c35d6bfc01061af"
+        },
+        {
+          "path": "panda/board/obj/panda/bootstub.elf",
+          "bytes": 102020,
+          "sha256": "9524bd4e098e3e1b2e9f1c2d374c78acb49b21c8f48200cf19453619b28c0d5a"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda.bin",
+          "bytes": 11056,
+          "sha256": "12d6ffd377e33f1af8e10092dd72500613fdd6da61e0a5acb02095b5612221e8"
+        }
+      ]
+    },
+    {
+      "variant": "panda_can_ignition_only",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_can_ignition_only.bin.signed",
+          "bytes": 108720,
+          "sha256": "fababff8fbf5c1395f428415db44248348b523704797e28c9f897ead0f30ae67"
+        },
+        {
+          "path": "panda/board/obj/panda_can_ignition_only/main.bin",
+          "bytes": 108584,
+          "sha256": "c5b7be3cc19edb3b256c909d3f7cd1d7acf2f969ded63268498396360e9a91db"
+        },
+        {
+          "path": "panda/board/obj/panda_can_ignition_only/main.elf",
+          "bytes": 450376,
+          "sha256": "43931206551ff68e2f37a61402cb166338816ae9ee9e0b47040a8afa28ca0939"
+        },
+        {
+          "path": "panda/board/obj/panda_can_ignition_only/bootstub.elf",
+          "bytes": 102040,
+          "sha256": "62118ebfe71e70edbc6c2d7de252daeecc51106e9465c3e0a23f4c91f12109e6"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_can_ignition_only.bin",
+          "bytes": 11056,
+          "sha256": "12d6ffd377e33f1af8e10092dd72500613fdd6da61e0a5acb02095b5612221e8"
+        }
+      ]
+    },
+    {
+      "variant": "panda_h7",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_h7.bin.signed",
+          "bytes": 131268,
+          "sha256": "6148454c078b1ee69edbdec91a3c6be0c91aab57d491d0ea9cd83ace24e4da18"
+        },
+        {
+          "path": "panda/board/obj/panda_h7/main.bin",
+          "bytes": 131132,
+          "sha256": "e8760a6d506822908a1ba2cc65e2bc143a19fcd40fa50dbcf17fe2d86387b461"
+        },
+        {
+          "path": "panda/board/obj/panda_h7/main.elf",
+          "bytes": 543604,
+          "sha256": "2aac45705e0a27c50d955dd287fc56402ab3d176340a808cebc2994a0765beb8"
+        },
+        {
+          "path": "panda/board/obj/panda_h7/bootstub.elf",
+          "bytes": 154888,
+          "sha256": "d3d4c5df9d1188d730000084dc5376c3b429b68426167cbd3c6fd48d5257ffd7"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_h7.bin",
+          "bytes": 18800,
+          "sha256": "f26a18ab4873ecd31737cecbeaea95f763f34cad2a7918b8c313970d05328ff7"
+        }
+      ]
+    },
+    {
+      "variant": "panda_h7_can_ignition_only",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_h7_can_ignition_only.bin.signed",
+          "bytes": 131256,
+          "sha256": "f2f5aa2c56521956a7860714a9c1e645b5e85a0f1317c1ce2f994aa997d4e192"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_can_ignition_only/main.bin",
+          "bytes": 131120,
+          "sha256": "7240971eaf5d78daa6d7b9fa8e00e4b52816c41e60ffa07b069b03084a1b07b0"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_can_ignition_only/main.elf",
+          "bytes": 543456,
+          "sha256": "3496544742f5f2528328092fe8739549addaadcea0d2f71922b41d542054ff32"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_can_ignition_only/bootstub.elf",
+          "bytes": 154908,
+          "sha256": "ba65b37372bcb8cdc6a0758cce5f6954a6db67c0302ebec858eec1c4191634df"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_h7_can_ignition_only.bin",
+          "bytes": 18800,
+          "sha256": "f26a18ab4873ecd31737cecbeaea95f763f34cad2a7918b8c313970d05328ff7"
+        }
+      ]
+    },
+    {
+      "variant": "panda_h7_hkg_remote",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_h7_hkg_remote.bin.signed",
+          "bytes": 131364,
+          "sha256": "e7a520a40012c5e706c7cdbf22d3974163446253cceddbd113f05bae605e63d0"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_hkg_remote/main.bin",
+          "bytes": 131228,
+          "sha256": "f1a65884979efe7cc3d943cdefbadda8379283bf5d0cc54d35395282805c6ac9"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_hkg_remote/main.elf",
+          "bytes": 544072,
+          "sha256": "c1272d4342dc51bedfc01bd1dabd35c6308b78e43ab1a23e520ba86200747e37"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_hkg_remote/bootstub.elf",
+          "bytes": 154900,
+          "sha256": "1e8960473da45c8c5039d4ba9e61ed9718087bfe0fa3c378d82648bbb9990565"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_h7_hkg_remote.bin",
+          "bytes": 18800,
+          "sha256": "f26a18ab4873ecd31737cecbeaea95f763f34cad2a7918b8c313970d05328ff7"
+        }
+      ]
+    },
+    {
+      "variant": "panda_h7_hkg_remote_can_ignition_only",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_h7_hkg_remote_can_ignition_only.bin.signed",
+          "bytes": 131356,
+          "sha256": "723ce67bcbdf5b44785d15634068c620c994af4ea1ca94c7840884c3c3e8f8ce"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_hkg_remote_can_ignition_only/main.bin",
+          "bytes": 131220,
+          "sha256": "c2d1126514e7600862353ba94087693dd9f902511e00e54622a4e5d5b37b2ed0"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_hkg_remote_can_ignition_only/main.elf",
+          "bytes": 543932,
+          "sha256": "c5f4a9b78f620d9be0c74b94803d39c46985269256ca975bb7eb11b79ecf76d7"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_hkg_remote_can_ignition_only/bootstub.elf",
+          "bytes": 154916,
+          "sha256": "3e93e22ef189548d05a598ac98516ea5ec43e74bb177a9205523416764a3718f"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_h7_hkg_remote_can_ignition_only.bin",
+          "bytes": 18800,
+          "sha256": "f26a18ab4873ecd31737cecbeaea95f763f34cad2a7918b8c313970d05328ff7"
+        }
+      ]
+    },
+    {
+      "variant": "panda_h7_remote",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_h7_remote.bin.signed",
+          "bytes": 131208,
+          "sha256": "574bfabd9c3315dc71d264df16a18672dea4cf913f26b9b128a69ece7ea842c4"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_remote/main.bin",
+          "bytes": 131072,
+          "sha256": "70c580a5cb0f4e05fbe4d1d71c24bd91391a21b2f98e0188a9dd66bf8f337054"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_remote/main.elf",
+          "bytes": 543624,
+          "sha256": "ce758a8b7b60823c69038393da8ab820c1328f6dba9cfae2d906ac43d83d6963"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_remote/bootstub.elf",
+          "bytes": 154896,
+          "sha256": "5509245cbd20e1b02b2308be627da161951cdd7f2ee0a7a74bdc671b76e53ed1"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_h7_remote.bin",
+          "bytes": 18800,
+          "sha256": "f26a18ab4873ecd31737cecbeaea95f763f34cad2a7918b8c313970d05328ff7"
+        }
+      ]
+    },
+    {
+      "variant": "panda_h7_remote_can_ignition_only",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_h7_remote_can_ignition_only.bin.signed",
+          "bytes": 131196,
+          "sha256": "02e645a392b673088a4517f83c95b475beac22405db5b15702c6bc7607090742"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_remote_can_ignition_only/main.bin",
+          "bytes": 131060,
+          "sha256": "4ad55307f63e789706e5ca1505e1167cd1c113eb292e1c32fbe784bc39660946"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_remote_can_ignition_only/main.elf",
+          "bytes": 543472,
+          "sha256": "aced50dbf049bcf57af6677516942eb9ecaaa1c0cd30381eea9dd995a369a8b3"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_remote_can_ignition_only/bootstub.elf",
+          "bytes": 154912,
+          "sha256": "32df8a1233a47c01019b41581e9963cf7304486c32d77372b459988103b17c7f"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_h7_remote_can_ignition_only.bin",
+          "bytes": 18800,
+          "sha256": "f26a18ab4873ecd31737cecbeaea95f763f34cad2a7918b8c313970d05328ff7"
+        }
+      ]
+    },
+    {
+      "variant": "panda_h7_tesla_wake",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_h7_tesla_wake.bin.signed",
+          "bytes": 131368,
+          "sha256": "f1259177f780cf7640f48784e7c8be90658684b67013702f11d869d95522627c"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_tesla_wake/main.bin",
+          "bytes": 131232,
+          "sha256": "b3836436e1939c9cde80894ef2685e0672f030fe777e1c20e699c91ce047ff2e"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_tesla_wake/main.elf",
+          "bytes": 544004,
+          "sha256": "bf4ea15e4c293d06e5f7077e9d28f34c9d87256ad21d2d561238da1ce85d7da9"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_tesla_wake/bootstub.elf",
+          "bytes": 154900,
+          "sha256": "0ebe92a2983a55d5c4060a0d0d1ac4d5dcbfd92d4f10bb6cfa27063701a2baf4"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_h7_tesla_wake.bin",
+          "bytes": 18800,
+          "sha256": "f26a18ab4873ecd31737cecbeaea95f763f34cad2a7918b8c313970d05328ff7"
+        }
+      ]
+    },
+    {
+      "variant": "panda_h7_tesla_wake_can_ignition_only",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_h7_tesla_wake_can_ignition_only.bin.signed",
+          "bytes": 131356,
+          "sha256": "36bea182228516d31e419a4a9ff9968fc6235e23468f7753788644047719dba2"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_tesla_wake_can_ignition_only/main.bin",
+          "bytes": 131220,
+          "sha256": "651c45cad655f069f4b94f8c9681fb8cbe3b86145a1fb09b1c4f73d278fc5857"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_tesla_wake_can_ignition_only/main.elf",
+          "bytes": 543852,
+          "sha256": "303a4f98e8f71c5556c936c2f203821ae9392b39d292f82c5ffec30d46c9f7d1"
+        },
+        {
+          "path": "panda/board/obj/panda_h7_tesla_wake_can_ignition_only/bootstub.elf",
+          "bytes": 154916,
+          "sha256": "2ab033b6fdabafb996560248b961fa006bb8d1ac29fef8e61856d3add3ed5b3d"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_h7_tesla_wake_can_ignition_only.bin",
+          "bytes": 18800,
+          "sha256": "f26a18ab4873ecd31737cecbeaea95f763f34cad2a7918b8c313970d05328ff7"
+        }
+      ]
+    },
+    {
+      "variant": "panda_hkg_remote",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_hkg_remote.bin.signed",
+          "bytes": 108820,
+          "sha256": "8660c53108ef2153f5dbafee9e0ec7782c1c02105bdf647e4e7c6add9e70deb4"
+        },
+        {
+          "path": "panda/board/obj/panda_hkg_remote/main.bin",
+          "bytes": 108684,
+          "sha256": "48cbc40dda43d961f927c136be51a9c8c14afcd54b5d7615cdb88505151322db"
+        },
+        {
+          "path": "panda/board/obj/panda_hkg_remote/main.elf",
+          "bytes": 450972,
+          "sha256": "b19c6195a494ffe1c411d856997dff0bb06105033e8df660072ff955cdf4ed4e"
+        },
+        {
+          "path": "panda/board/obj/panda_hkg_remote/bootstub.elf",
+          "bytes": 102032,
+          "sha256": "421a5fa18daf8b7cda5329156a868f4f7ec04b9d711c2f5852d2494f149bfde8"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_hkg_remote.bin",
+          "bytes": 11056,
+          "sha256": "12d6ffd377e33f1af8e10092dd72500613fdd6da61e0a5acb02095b5612221e8"
+        }
+      ]
+    },
+    {
+      "variant": "panda_hkg_remote_can_ignition_only",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_hkg_remote_can_ignition_only.bin.signed",
+          "bytes": 108808,
+          "sha256": "bfaeff66f9d036ae2df1e3187df143deb1d31602487ce70d9c1bf6931dcb4c4e"
+        },
+        {
+          "path": "panda/board/obj/panda_hkg_remote_can_ignition_only/main.bin",
+          "bytes": 108672,
+          "sha256": "fe3f6da07e393f1e38fe1bf254cce5620bae3f237428416d6795ae4f8dba12a8"
+        },
+        {
+          "path": "panda/board/obj/panda_hkg_remote_can_ignition_only/main.elf",
+          "bytes": 450824,
+          "sha256": "cc169d334ce36872f23a5aa637ec3aa12d9bb7b928b3af841fd48bff485577af"
+        },
+        {
+          "path": "panda/board/obj/panda_hkg_remote_can_ignition_only/bootstub.elf",
+          "bytes": 102052,
+          "sha256": "33aa9df53476ecda531fb3b6783a24d02f159f30b8cd439317128ec89cf9f651"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_hkg_remote_can_ignition_only.bin",
+          "bytes": 11056,
+          "sha256": "12d6ffd377e33f1af8e10092dd72500613fdd6da61e0a5acb02095b5612221e8"
+        }
+      ]
+    },
+    {
+      "variant": "panda_jungle_h7",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_jungle_h7.bin.signed",
+          "bytes": 125152,
+          "sha256": "aa4374fa2699d5128204201e496aa96d992cadba3e083fe57dd3f92d1feebcf7"
+        },
+        {
+          "path": "panda/board/obj/panda_jungle_h7/main.bin",
+          "bytes": 125016,
+          "sha256": "37ec6ccf7bedbf3052a0b504f958ec835f9fb8eb7514fd86705a084b3e8c5322"
+        },
+        {
+          "path": "panda/board/obj/panda_jungle_h7/main.elf",
+          "bytes": 507844,
+          "sha256": "4343004543bae3f7ca3e4567b98244856e6043d2a8a6540fb95522c0718c619f"
+        },
+        {
+          "path": "panda/board/obj/panda_jungle_h7/bootstub.elf",
+          "bytes": 126176,
+          "sha256": "f47a6e20127f2d3fe12b74520ff4be3deeccc261e204e2876287741da3f6ca9c"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_jungle_h7.bin",
+          "bytes": 14064,
+          "sha256": "9e213c7349f98bc700fb1638a2c738f0b119479f6f80491eccfdb13ccd409160"
+        }
+      ]
+    },
+    {
+      "variant": "panda_remote",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_remote.bin.signed",
+          "bytes": 108696,
+          "sha256": "1b349e22f56b2caf25a62c994dcdfd4c6b793c9a9fe9d2e046a3b1aaaf7484a1"
+        },
+        {
+          "path": "panda/board/obj/panda_remote/main.bin",
+          "bytes": 108560,
+          "sha256": "473ee882760ebf7336944f34d86878c58446136ea5264e3b1964a206f2e1ac03"
+        },
+        {
+          "path": "panda/board/obj/panda_remote/main.elf",
+          "bytes": 450708,
+          "sha256": "b2d168da0e92f498bf2357f93cf100546bb6956b35e03ed5ff9322a97769dc8a"
+        },
+        {
+          "path": "panda/board/obj/panda_remote/bootstub.elf",
+          "bytes": 102028,
+          "sha256": "19eafc7427aacd26e50343ad70412d6853f16b8e9a12718a0a7ea824506196f2"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_remote.bin",
+          "bytes": 11056,
+          "sha256": "12d6ffd377e33f1af8e10092dd72500613fdd6da61e0a5acb02095b5612221e8"
+        }
+      ]
+    },
+    {
+      "variant": "panda_remote_can_ignition_only",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_remote_can_ignition_only.bin.signed",
+          "bytes": 108680,
+          "sha256": "d24f8c646f05d553b87e112fa312fa4ac78507117f274bf74cfcde2c3bd92e65"
+        },
+        {
+          "path": "panda/board/obj/panda_remote_can_ignition_only/main.bin",
+          "bytes": 108544,
+          "sha256": "f1dc94f824906fa2da3aa2231a784a08324cf47182cea9141da39a54e53549d2"
+        },
+        {
+          "path": "panda/board/obj/panda_remote_can_ignition_only/main.elf",
+          "bytes": 450556,
+          "sha256": "eb45fe9519127f9100b0b0f044cfbc9038735fb68b412c3ca63e228401d02c3f"
+        },
+        {
+          "path": "panda/board/obj/panda_remote_can_ignition_only/bootstub.elf",
+          "bytes": 102048,
+          "sha256": "c268ec31f6cbb2d1edf5bc7ce09dca37ee0ddd8a18f1407040c7aadffeacdd52"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_remote_can_ignition_only.bin",
+          "bytes": 11056,
+          "sha256": "12d6ffd377e33f1af8e10092dd72500613fdd6da61e0a5acb02095b5612221e8"
+        }
+      ]
+    },
+    {
+      "variant": "panda_tesla_wake",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_tesla_wake.bin.signed",
+          "bytes": 108836,
+          "sha256": "bf8ee4ac77b2f6c62b4cbfce18398321ab8bbdd8274aae56b6dd9ce57f9e4403"
+        },
+        {
+          "path": "panda/board/obj/panda_tesla_wake/main.bin",
+          "bytes": 108700,
+          "sha256": "f65cf41c040b8d0c463d7a9afd9b2ab931651d654da324db6e8f30fa99ee212f"
+        },
+        {
+          "path": "panda/board/obj/panda_tesla_wake/main.elf",
+          "bytes": 451116,
+          "sha256": "8aa316c61903dc70916a4455503cb0b2f5f4d4e2c2b399c1ca56ea0b2f6f14aa"
+        },
+        {
+          "path": "panda/board/obj/panda_tesla_wake/bootstub.elf",
+          "bytes": 102032,
+          "sha256": "2d40d97f9907893ff0a37141e0b62aa5ad239469a9162ff2fee0fe9f5a11b287"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_tesla_wake.bin",
+          "bytes": 11056,
+          "sha256": "12d6ffd377e33f1af8e10092dd72500613fdd6da61e0a5acb02095b5612221e8"
+        }
+      ]
+    },
+    {
+      "variant": "panda_tesla_wake_can_ignition_only",
+      "signature_verified": true,
+      "runtime_signature_changed_from_base": true,
+      "files": [
+        {
+          "path": "panda/board/obj/panda_tesla_wake_can_ignition_only.bin.signed",
+          "bytes": 108820,
+          "sha256": "63e056957d6e15047b5b06f5c0236ff1ad7f443e945669de87eaa076d9ec1e1e"
+        },
+        {
+          "path": "panda/board/obj/panda_tesla_wake_can_ignition_only/main.bin",
+          "bytes": 108684,
+          "sha256": "3e063a75d3344af73c2c2aaea7010a3d7b287e531458fc26d2d0b592dd21ab7d"
+        },
+        {
+          "path": "panda/board/obj/panda_tesla_wake_can_ignition_only/main.elf",
+          "bytes": 450964,
+          "sha256": "6475e20cfce5dc19b999cae7c839f4754bb238837e5a3b2c8b8d953ca9ea872b"
+        },
+        {
+          "path": "panda/board/obj/panda_tesla_wake_can_ignition_only/bootstub.elf",
+          "bytes": 102052,
+          "sha256": "40f3ca3fd213691530e6eacffff5368f21914f43850a7757460a3ccb60a7eaa8"
+        },
+        {
+          "path": "panda/board/obj/bootstub.panda_tesla_wake_can_ignition_only.bin",
+          "bytes": 11056,
+          "sha256": "12d6ffd377e33f1af8e10092dd72500613fdd6da61e0a5acb02095b5612221e8"
+        }
+      ]
+    }
+  ]
+}
