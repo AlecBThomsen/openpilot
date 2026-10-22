@@ -65,6 +65,18 @@ The [`juniper-fix` branch](https://github.com/AlecBThomsen/StarPilot/tree/junipe
 
 ## Before using the branch in the vehicle
 
+### Switching from sunnypilot dev
+
+The installer branch is available in `AlecBThomsen/openpilot` as `juniper-fix`, so a device already using that repository can select it through Target Branch. The custom installer URL is `https://installer.comma.ai/AlecBThomsen/juniper-fix`.
+
+sunnypilot commit `289faac4145b65963156f7e73da3c96ae60420d9` defaults to AGNOS 19.7 and expects the next system-update manifest at `openpilot/system/hardware/comma/agnos.json`. Dom targets AGNOS 19.8.1 and stores that manifest under `system/hardware/tici/agnos.json`. When an OS update is needed, the old updater fails on the missing path after fetching the branch. Its UI can display the generic "failed to check for update" message for this failure too.
+
+This branch supplies a relative symlink at the expected path to the existing manifest. It does not change the system images, hashes, required OS version, or firmware. The missing-file failure was reproduced with the original updater's OS-update function using a read-only manifest check in place of flashing. The compatibility path and manifest schema are covered by regression tests. All seven primary image URLs returned HTTP 200 when checked; the compressed OS images total approximately 1.07 GB, in addition to the application download.
+
+After receiving this compatibility fix, use **Settings → Software → CHECK**, then **DOWNLOAD** when offered, while parked and connected to Wi-Fi. Wait for **INSTALL** and keep power connected through the update. A different failure still requires the device's `LastUpdateException` or updater log; the generic UI text alone does not identify its cause.
+
+### Vehicle checks
+
 Keep a route back to the known-working sunnypilot version. Complete a parked startup check: confirm the correct car, expected brake state, successful Panda firmware update, and absence of persistent CAN/process errors. Do not bypass an alert or force another model to enable controls.
 
 If an error remains, save the full alert and Galaxy's Tmux Log. A missing old brake message previously appeared as `CANParser: 0x39d IBST_status not valid (timeout or missing)`. Other missing-message names or a traceback require separate diagnosis. Log sharing is not automatic.
